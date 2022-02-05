@@ -19,7 +19,7 @@ namespace Login.ModelView
         public MainFlag MyMainFlag { get; set; }
 
         public ImageViewModel ImageViewModel { get; set; }
-        List<int> listImage { get; set; }
+       
 
         public MainViewModel()
         {
@@ -29,11 +29,11 @@ namespace Login.ModelView
             MyMainFlag = new MainFlag();
             MyMainScreen = new OptionViewModel();
             ImageViewModel = new ImageViewModel();
-            listImage = new List<int>();
+           
         }
         public void setImage()
         {
-            List<ItemImage> items = FileIO.LoadJson();
+            ImageViewModel.items = FileIO.LoadJson();
 
             Random random = new Random();
             int index = 0;
@@ -42,11 +42,11 @@ namespace Login.ModelView
             {
                 index = random.Next(0, 10);
 
-            } while (listImage.Contains(index));
+            } while (ImageViewModel.listImage.Contains(index));
 
-            listImage.Add(index);
-            ImageViewModel.Word = items[index].word;
-            ImageViewModel.Image = items[index].image;
+            ImageViewModel.listImage.Add(index);
+            ImageViewModel.Word = ImageViewModel.items[index].word;
+            ImageViewModel.Image = ImageViewModel.items[index].image;
 
         }
         public void setScreen(string _status)
@@ -81,6 +81,12 @@ namespace Login.ModelView
             {
                 MyMainFlag = new IncorrectFlagViewModel();
             }
+            onPropertyChange("MyMainFlag");
+        }
+
+        public bool checkWord(string word)
+        {
+            return ImageViewModel.checkWord(word);
         }
     }
 }

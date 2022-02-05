@@ -13,6 +13,13 @@ namespace Login.ModelView
         private string _word;
         private string _image;
 
+        public List<int> listImage { get; set; }
+        public List<ItemImage> items { get; set; }
+        public ImageViewModel()
+        {
+            listImage = new List<int>();
+        }
+
         public string Word
         {
             get
@@ -47,6 +54,11 @@ namespace Login.ModelView
                 _image = value;
                 onPropertyChange("Image");
             }
+        }
+
+        public bool checkWord(string word)
+        {
+            return items[listImage.Last()].word == word;
         }
     }
 }

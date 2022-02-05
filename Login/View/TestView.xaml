@@ -37,7 +37,7 @@
         </Border>
         <Image 
             Grid.RowSpan="2"
-            Source="../Image/word_image_9.jpg"
+            Source="{Binding ImageViewModel.Image}"
            />
 
         <Button Grid.Column="1" Grid.Row="1"
@@ -63,12 +63,15 @@
                 </StackPanel>
             </StackPanel>
             <TextBox 
+                x:Name="txtWord"
                 Margin="20"
                 FontSize="30"
                  HorizontalAlignment="Center"
                 Text="Hello"/>
-            <Button Content="Submit" Click="Submit_"/>
-            <ContentControl Content="{Binding MyMainFlag}"/>
+            <Button Content="Submit" Click="Submit_Click"/>
+            <ContentControl 
+                Foreground="Transparent"
+                Content="{Binding MyMainFlag, UpdateSourceTrigger=PropertyChanged}"/>
 
         </StackPanel>
         

@@ -31,10 +31,21 @@ namespace Login.View
         private void Next_Click(object sender, RoutedEventArgs e)
         {
             /*DataContext = null;*/
+            _main.setImage();
         }
 
-        private void Submit_(object sender, RoutedEventArgs e)
+        private void Submit_Click(object sender, RoutedEventArgs e)
         {
+            if (_main.checkWord(txtWord.Text))
+            {
+                /*_main.MyMainFlag = new CorrectFlagViewModel();*/
+                _main.setFlag("true");
+            }
+            else
+            {
+                /* _main.MyMainFlag = new IncorrectFlagViewModel();*/
+                _main.setFlag("false");
+            }
 
         }
     }
