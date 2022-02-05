@@ -33,6 +33,8 @@ namespace Login.View
         {
             /*DataContext = null;*/
             _main.setImage();
+           
+          /*  comboLogout.SelectedItem = itemLogout;*/
         }
 
         private void Submit_Click(object sender, RoutedEventArgs e)

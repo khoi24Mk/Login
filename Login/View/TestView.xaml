@@ -59,7 +59,7 @@
                         Margin="0 0 200 0" Click="Back_Click"/>
                 <StackPanel Orientation="Horizontal">
                     <Label Content="Khoi1"/>
-                    <ComboBox/>
+                    
                 </StackPanel>
             </StackPanel>
             <TextBox 
@@ -70,6 +70,7 @@
                 Text="Hello"/>
             <Button Content="Submit" Click="Submit_Click"/>
             <ContentControl 
+                x:Name="ContentControl"
                 Foreground="Transparent"
                 Content="{Binding MyMainFlag, UpdateSourceTrigger=PropertyChanged}"/>
 

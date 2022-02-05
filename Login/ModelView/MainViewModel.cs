@@ -19,8 +19,8 @@ namespace Login.ModelView
         public MainFlag MyMainFlag { get; set; }
 
         public ImageViewModel ImageViewModel { get; set; }
-       
 
+       
         public MainViewModel()
         {
             Pass = new PasswordComfirmViewModel();
@@ -29,7 +29,10 @@ namespace Login.ModelView
             MyMainFlag = new MainFlag();
             MyMainScreen = new OptionViewModel();
             ImageViewModel = new ImageViewModel();
+
            
+
+
         }
         public void setImage()
         {
@@ -40,7 +43,7 @@ namespace Login.ModelView
                     return;
                 }
             }
-            
+            MyMainFlag = null;
             ImageViewModel.items = FileIO.LoadJson();
 
             Random random = new Random();
@@ -55,7 +58,7 @@ namespace Login.ModelView
             ImageViewModel.listImage.Add(index);
             ImageViewModel.Word = ImageViewModel.items[index].word;
             ImageViewModel.Image = ImageViewModel.items[index].image;
-
+            onPropertyChange("MyMainFlag");
         }
         public void setScreen(string _status)
         {

@@ -47,7 +47,7 @@
                         Margin="0 0 200 0" Click="Back_Click"/>
                 <StackPanel Orientation="Horizontal">
                     <Label Content="Khoi1"/>
-                    <ComboBox/>
+                   
                 </StackPanel>
             </StackPanel>
             <Label 

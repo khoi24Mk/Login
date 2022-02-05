@@ -34,6 +34,8 @@ namespace Login
             DataContext = x;
         }
 
+        
+
         private void ButtonLogin_Click(object sender, RoutedEventArgs e)
         {
             txtComfirmPass.Visibility = Visibility.Collapsed;

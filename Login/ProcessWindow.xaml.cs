@@ -1,6 +1,7 @@
 ﻿using Login.ModelView;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +26,8 @@ namespace Login
             InitializeComponent();
             DataContext = _main;
         }
+
+       
         public static void setScreen(string _status)
         {
             _main.setScreen(_status);
@@ -34,5 +37,9 @@ namespace Login
             get { return creatingForm; }
             set { creatingForm = value; }
         }
+
+       
+
+       
     }
 }
