@@ -33,6 +33,14 @@ namespace Login.ModelView
         }
         public void setImage()
         {
+            if (ImageViewModel.items != null)
+            {
+                if (ImageViewModel.items.Count == ImageViewModel.listImage.Count)
+                {
+                    return;
+                }
+            }
+            
             ImageViewModel.items = FileIO.LoadJson();
 
             Random random = new Random();
@@ -57,7 +65,7 @@ namespace Login.ModelView
                 MyMainScreen = new OptionViewModel();
                 
             }
-            else if (_status == "learn")
+            else if (_status == "LEARN")
             {
                 Debug.WriteLine("LEARN");
                 MyMainScreen = new LearnViewModel();

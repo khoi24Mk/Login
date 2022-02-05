@@ -44,7 +44,7 @@
             Grid.Column="1">
             <StackPanel Orientation="Horizontal">
                 <Button Content="Back"
-                        Margin="0 0 200 0"/>
+                        Margin="0 0 200 0" Click="Back_Click"/>
                 <StackPanel Orientation="Horizontal">
                     <Label Content="Khoi1"/>
                     <ComboBox/>

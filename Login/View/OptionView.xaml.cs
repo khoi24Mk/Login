@@ -27,12 +27,12 @@ namespace Login.View
 
         private void Test_Click(object sender, RoutedEventArgs e)
         {
-            ProcessWindow.setScreen("test");
+            ProcessWindow.setScreen("TEST");
         }
 
         private void Learn_Click(object sender, RoutedEventArgs e)
         {
-            ProcessWindow.setScreen("learn");
+            ProcessWindow.setScreen("LEARN");
         }
     }
 }

@@ -26,6 +26,7 @@ namespace Login.View
         {
             InitializeComponent();
             DataContext = _main;
+            _main.setImage();
         }
 
         private void Next_Click(object sender, RoutedEventArgs e)
@@ -47,6 +48,11 @@ namespace Login.View
                 _main.setFlag("false");
             }
 
+        }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            ProcessWindow.setScreen("OPTION");
         }
     }
 }
