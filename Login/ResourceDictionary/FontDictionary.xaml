@@ -3,5 +3,6 @@
 
 
     <FontFamily x:Key="NarutoFont">./Fonts/Skranji-Regular.ttf#Skranji Regular</FontFamily>
+    <FontFamily x:Key="sthherer">./Fonts/SupermercadoOne-Regular.ttf#SupermercadoOne Regular</FontFamily>
     
 </ResourceDictionary>

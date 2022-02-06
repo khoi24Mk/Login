@@ -1,4 +1,5 @@
 ﻿using Login.ModelView;
+using Login.SQLquery;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -39,6 +40,7 @@ namespace Login
         private void ButtonLogin_Click(object sender, RoutedEventArgs e)
         {
             txtComfirmPass.Visibility = Visibility.Collapsed;
+            queryOperation._status = true;
             if (_flag)
             {
                 _flag = false;
@@ -62,6 +64,7 @@ namespace Login
         private void ButtonRegister_Click(object sender, RoutedEventArgs e)
         {
             txtComfirmPass.Visibility = Visibility.Visible;
+            queryOperation._status = false;
             if (!_flag)
             {
                 _flag = true;

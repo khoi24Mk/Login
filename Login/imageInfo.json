@@ -1,0 +1,45 @@
+[
+    {
+        "word":"weasel",
+        "image":"word_image_1"
+    },
+    {
+        "word":"panther",
+        "image":"word_image_2"
+    },
+    {
+        "word":"turtle",
+        "image":"word_image_3"
+    },
+    {
+        "word":"monkey",
+        "image":"word_image_4"
+    },
+    {
+        "word":"horse",
+        "image":"word_image_5"
+    },
+    {
+        "word":"slug",
+        "image":"word_image_6"
+    }
+    ,
+    {
+        "word":"Dragonfly",
+        "image":"word_image_7"
+    },
+    {
+        "word":"Octopus",
+        "image":"word_image_8"
+    },
+    {
+        "word":"Fox",
+        "image":"word_image_9"
+    },
+    {
+        "word":"Monster",
+        "image":"word_image_10"
+    }
+
+
+]

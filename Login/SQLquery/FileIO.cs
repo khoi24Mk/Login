@@ -2,8 +2,10 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,7 +18,9 @@ namespace Login.SQLquery
         {
 
             List<ItemImage> items;
-            using (StreamReader r = new StreamReader("imageInfo.json"))
+           /* string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Data\Names.txt");
+            Debug.WriteLine("PATH: "+path);*/
+            using (StreamReader r = new StreamReader("../../imageInfo.json"))
             {
                 string json = r.ReadToEnd();
                 items = JsonConvert.DeserializeObject<List<ItemImage>>(json);

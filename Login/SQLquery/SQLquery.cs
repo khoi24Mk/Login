@@ -12,7 +12,7 @@ namespace Login.SQLquery
 {
     public class queryOperation
     {
-        private static bool _status { set; get; } = true;
+        public static bool _status { set; get; } = true;
         /*private static SQLquery ConnectionDB;
         private SQLquery()
         {
