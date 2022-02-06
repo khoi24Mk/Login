@@ -46,4 +46,5 @@ C:\Users\KHACH\source\repos\Login\Login\obj\Debug\View\CorrectFlag.g.cs
 C:\Users\KHACH\source\repos\Login\Login\obj\Debug\View\IncorrectFlag.g.cs
 C:\Users\KHACH\source\repos\Login\Login\obj\Debug\View\CorrectFlag.baml
 C:\Users\KHACH\source\repos\Login\Login\obj\Debug\View\IncorrectFlag.baml
+C:\Users\KHACH\source\repos\Login\Login\obj\Debug\ResourceDictionary\ButtonLogoutDictionary.baml
 C:\Users\KHACH\source\repos\Login\Login\obj\Debug\Login.csproj.AssemblyReference.cache

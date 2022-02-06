@@ -18,7 +18,7 @@
         </DataTemplate>
     </UserControl.Resources>
     
-    <Grid>
+    <Grid Height="450">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -36,13 +36,21 @@
             </Border.Background>
         </Border>
         <Image 
+           
+            Grid.Column="0"
+            Grid.Row="0"
             Grid.RowSpan="2"
+            Width="300"
             Source="{Binding ImageViewModel.Image}"
            />
+
+        
 
         <Button Grid.Column="1" Grid.Row="1"
                 Width="350"
                 Height="300"
+                BorderBrush="Transparent"
+                BorderThickness="0"
                 Background="Transparent" Click="Next_Click"
                 >
             <Image 
@@ -54,14 +62,7 @@
         <StackPanel 
             Grid.Row="0"
             Grid.Column="1">
-            <StackPanel Orientation="Horizontal">
-                <Button Content="Back"
-                        Margin="0 0 200 0" Click="Back_Click"/>
-                <StackPanel Orientation="Horizontal">
-                    <Label Content="Khoi1"/>
-                    
-                </StackPanel>
-            </StackPanel>
+            
             <TextBox 
                 x:Name="txtWord"
                 Margin="20"

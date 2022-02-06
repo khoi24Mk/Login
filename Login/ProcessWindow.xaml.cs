@@ -25,11 +25,14 @@ namespace Login
         {
             InitializeComponent();
             DataContext = _main;
+            setScreen("OPTION");
+            
         }
 
        
         public static void setScreen(string _status)
         {
+            
             _main.setScreen(_status);
         }
         public Window setCreatingForm
@@ -38,8 +41,17 @@ namespace Login
             set { creatingForm = value; }
         }
 
-       
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            setScreen("OPTION");
+        }
 
-       
+        private void Logout_Click(object sender, RoutedEventArgs e)
+        {
+            LoginWindow x = new LoginWindow();
+            x.Show();
+            this.Close();
+            
+        }
     }
 }

@@ -7,7 +7,7 @@
         xmlns:views="clr-namespace:Login.View"
         xmlns:viewmodels="clr-namespace:Login.ModelView"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="MainWindow" Height="520" Width="800"
         WindowStyle="None" AllowsTransparency="true"
         Background="Transparent">
     <Window.Resources>
@@ -21,34 +21,62 @@
             <views:TestView/>
         </DataTemplate>
     </Window.Resources>
-    <Grid DataContext="{Binding}">
-
-
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-
-        <Border Grid.Row="0" Grid.RowSpan="2">
-            <Border.Background>
-                <LinearGradientBrush>
-                    <GradientStop Color="Cyan" Offset="0"/>
-                    <GradientStop Color="pink" Offset="1"/>
-                </LinearGradientBrush>
-            </Border.Background>
-            
-        </Border>
-
-       
+    <StackPanel 
         
+        DataContext="{Binding}">
+        <StackPanel.Background>
+            <ImageBrush ImageSource="Image/Option_background.jpg"/>
+        </StackPanel.Background>
+        
+        
+        <StackPanel Orientation="Horizontal">
+            <Button
+                x:Name="btnBack"
+                Opacity="0"
+                Width="auto"
+                    Height="auto"
+                BorderBrush="Transparent"
+                BorderThickness="0"
+                Background="Transparent"
+                        Margin="0 0 550 0" Click="Back_Click">
+                <Image 
+                    Stretch="Fill"
+                    Width="50"
+                    Height="50"
+                    RenderOptions.BitmapScalingMode="Fant"
+                    Source="Image/back_icon.png"/>
+            </Button>
+            <StackPanel Orientation="Horizontal">
+                <Label 
+                    BorderBrush="Gray"
+                    BorderThickness="0 0 1 0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Margin="0 0 10 0"
+                    Padding="0"
+                    Content="Khoi1"/>
+                <Button
+                    
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Margin="0"
+                    Padding="0"
+                    Style="{StaticResource ButtonLogout}"
+                    Content="Logout" Click="Logout_Click"/>
+            </StackPanel>
+        </StackPanel>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
 
-
-
-
-
-        <ContentControl 
+            <ContentControl 
+            x:Name="Contentcontrol"
             Grid.Row="0"
-            Grid.RowSpan="2"
+            Grid.RowSpan="1"
             Content="{Binding MyMainScreen, UpdateSourceTrigger=PropertyChanged}"/>
-    </Grid>
+
+        </Grid>
+       
+    </StackPanel>
 </Window>

@@ -20,7 +20,7 @@
                 <ResourceDictionary Source="ResourceDictionary/ComfirmPassDictionary.xaml"/>
                 <ResourceDictionary Source="ResourceDictionary/LoginPassword.xaml"/>
                 <ResourceDictionary Source="ResourceDictionary/TextboxMaterial.xaml"/>
-
+                <ResourceDictionary Source="ResourceDictionary/ButtonLogoutDictionary.xaml"/>
 
 
 

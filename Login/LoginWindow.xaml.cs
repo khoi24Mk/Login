@@ -50,6 +50,7 @@ namespace Login
                 _processWindow = new ProcessWindow();
                 _processWindow.setCreatingForm = this;
                 _processWindow.Show();
+                
                 this.Close();
             }
             else
