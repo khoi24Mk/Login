@@ -32,7 +32,7 @@
         <StackPanel Orientation="Horizontal">
             <Button
                 x:Name="btnBack"
-                Opacity="0"
+               
                 Width="auto"
                     Height="auto"
                 BorderBrush="Transparent"

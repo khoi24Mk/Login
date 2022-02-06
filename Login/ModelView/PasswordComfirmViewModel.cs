@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +26,12 @@ namespace Login.ModelView
                 _password = value;
                 onPropertyChange("Password");
             }
+        }
+
+        public void setPassword()
+        {
+            Debug.WriteLine("PASSSSSSSSSSSS: " + _password);
+            Password = "";
         }
     }
 }

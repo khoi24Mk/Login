@@ -41,6 +41,9 @@ namespace Login
         {
             txtComfirmPass.Visibility = Visibility.Collapsed;
             queryOperation._status = true;
+            labelComfirmPass.Content = "";
+
+
             if (_flag)
             {
                 _flag = false;
