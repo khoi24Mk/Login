@@ -58,7 +58,7 @@ namespace Login.ModelView
 
         public bool checkWord(string word)
         {
-            return items[listImage.Last()].word == word;
+            return items[listImage.Last()].word.ToLower() == word.ToLower();
         }
     }
 }

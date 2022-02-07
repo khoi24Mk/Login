@@ -29,7 +29,10 @@ namespace Login
             
         }
 
-       
+       public void setUsername(string username)
+        {
+            _main.UserModelview.Username = username;
+        }
         public static void setScreen(string _status)
         {
             
@@ -52,6 +55,16 @@ namespace Login
             x.Show();
             this.Close();
             
+        }
+
+        private void onMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
+
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

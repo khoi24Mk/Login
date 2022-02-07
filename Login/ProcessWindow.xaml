@@ -21,10 +21,14 @@
             <views:TestView/>
         </DataTemplate>
     </Window.Resources>
+ 
+        
+    
     <StackPanel 
         
-        DataContext="{Binding}">
+        DataContext="{Binding}" MouseDown="onMouseDown">
         <StackPanel.Background>
+            
             <ImageBrush ImageSource="Image/Option_background.jpg"/>
         </StackPanel.Background>
         
@@ -54,7 +58,7 @@
                     VerticalAlignment="Center"
                     Margin="0 0 10 0"
                     Padding="0"
-                    Content="Khoi1"/>
+                    Content="{Binding UserModelview.Username}"/>
                 <Button
                     
                     HorizontalAlignment="Center"
@@ -64,6 +68,18 @@
                     Style="{StaticResource ButtonLogout}"
                     Content="Logout" Click="Logout_Click"/>
             </StackPanel>
+            <Button
+                BorderBrush="red"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Right"
+                Background="Transparent"
+                Margin="38 0 0 0"
+                Width="50" Click="Close_Click"
+                >
+                <Image 
+                
+                    Width="50" Source="Image/Close_Image.jpg"/>
+            </Button>
         </StackPanel>
         <Grid>
             <Grid.RowDefinitions>
@@ -77,6 +93,8 @@
             Content="{Binding MyMainScreen, UpdateSourceTrigger=PropertyChanged}"/>
 
         </Grid>
-       
+        
     </StackPanel>
+       
+    
 </Window>

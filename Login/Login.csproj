@@ -96,6 +96,7 @@
     <Compile Include="ModelView\MainScreen.cs" />
     <Compile Include="ModelView\OptionViewModel.cs" />
     <Compile Include="ModelView\TestViewModel.cs" />
+    <Compile Include="ModelView\UserModelView.cs" />
     <Compile Include="ProcessWindow.xaml.cs">
       <DependentUpon>ProcessWindow.xaml</DependentUpon>
     </Compile>
@@ -254,6 +255,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Close_Image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Close_Login.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

@@ -13,20 +13,7 @@ namespace Login.SQLquery
     public class queryOperation
     {
         public static bool _status { set; get; } = true;
-        /*private static SQLquery ConnectionDB;
-        private SQLquery()
-        {
-
-        }
-
-        public static SQLquery getConnectionObject()
-        {
-            if(ConnectionDB == null)
-            {
-                ConnectionDB = new SQLquery();
-            }
-            return ConnectionDB;
-        }*/
+        private const string _databasename = "EnglishMochi"; // database name
 
 
         public static bool SQLcheckUsername(string strLoginUsername)
@@ -35,7 +22,8 @@ namespace Login.SQLquery
             {
                 return true;
             }
-            SqlConnection ConnectDatabase = new SqlConnection(@"Server=(local);Database=EnglishMochi;Trusted_Connection=Yes;");
+            SqlConnection ConnectDatabase = 
+                new SqlConnection(string.Format(@"Server=(local);Database={0};Trusted_Connection=Yes;",_databasename));
             try
             {
                 if (ConnectDatabase.State == System.Data.ConnectionState.Closed)
@@ -83,11 +71,13 @@ namespace Login.SQLquery
 
         public static void SQLRegister(TextBox txtLoginUsername, PasswordBox txtLoginPassword)
         {
+            Debug.WriteLine("START REGIS");
             _status = false;
 
 
 
-            SqlConnection ConnectDatabase = new SqlConnection(@"Server=(local);Database=EnglishMochi;Trusted_Connection=Yes;");
+            SqlConnection ConnectDatabase =
+                new SqlConnection(string.Format(@"Server=(local);Database={0};Trusted_Connection=Yes;", _databasename));
             try
             {
                 if (ConnectDatabase.State == System.Data.ConnectionState.Closed)
@@ -95,7 +85,7 @@ namespace Login.SQLquery
 
                     ConnectDatabase.Open();
 
-                    Debug.WriteLine("OPEN");
+                    Debug.WriteLine("OPEN REGIS");
 
 
                     string sqlString = "INSERT INTO _User ( _userName, _passWord) \n"
@@ -105,7 +95,7 @@ namespace Login.SQLquery
                     cmd.Parameters.AddWithValue("@username", txtLoginUsername.Text);
                     cmd.Parameters.AddWithValue("@password", txtLoginPassword.Password);
                     cmd.ExecuteNonQuery();
-
+                    MessageBox.Show("Register successfully!!");
 
                 }
             }
@@ -127,7 +117,8 @@ namespace Login.SQLquery
             _status = true ;
 
 
-            SqlConnection ConnectDatabase = new SqlConnection(@"Server=(local);Database=EnglishMochi;Trusted_Connection=Yes;");
+            SqlConnection ConnectDatabase =
+                new SqlConnection(string.Format(@"Server=(local);Database={0};Trusted_Connection=Yes;", _databasename));
             try
             {
                 if (ConnectDatabase.State == System.Data.ConnectionState.Closed)
@@ -145,12 +136,12 @@ namespace Login.SQLquery
                     int count = Convert.ToInt32(cmd.ExecuteScalar());
                     if (count == 1)
                     {
-                        MessageBox.Show("OK");
+                       
                         return true;
                     }
                     else
                     {
-                        MessageBox.Show("INCORRECT");
+                       
                         return false;
                     }
 

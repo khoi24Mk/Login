@@ -13,7 +13,9 @@
 
       
 
-    <Grid>
+    <Grid MouseDown="onMouseDown"
+        
+        >
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
@@ -27,6 +29,18 @@
                 </LinearGradientBrush>
             </Border.Background>
         </Border>
+
+        <Canvas Grid.Row="0">
+            <Button Canvas.Right="0"
+                    Canvas.Top="10"
+                    BorderBrush="Transparent"
+                    BorderThickness="0"
+                    Background="Transparent" Click="Close_Click"
+                    
+                    >
+                <Image Source="Image/Close_Login.png"/>
+            </Button>
+        </Canvas>
 
         <StackPanel HorizontalAlignment="Center" 
                     Margin="25">
@@ -45,7 +59,9 @@
 
         <StackPanel Grid.Row="1"
                     HorizontalAlignment="Center">
-            <Label Content="{Binding Username.Name, Mode=OneWay}"
+            <Label 
+                x:Name="labelUsername"
+                Content="{Binding Username.Name, Mode=OneWay}"
                    Margin="0"
                    Padding="0"
                    Foreground="Red"/>

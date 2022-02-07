@@ -46,6 +46,8 @@ namespace Login
 
             if (_flag)
             {
+                txtLoginUsername.Text = "";
+                txtLoginPassword.Password = "";
                 _flag = false;
                 return;
             }
@@ -54,6 +56,7 @@ namespace Login
                 MessageBox.Show("OK");
                 _processWindow = new ProcessWindow();
                 _processWindow.setCreatingForm = this;
+                _processWindow.setUsername(txtLoginUsername.Text);
                 _processWindow.Show();
                 
                 this.Close();
@@ -66,16 +69,27 @@ namespace Login
 
         private void ButtonRegister_Click(object sender, RoutedEventArgs e)
         {
+            
+           
             txtComfirmPass.Visibility = Visibility.Visible;
             queryOperation._status = false;
+            Debug.WriteLine("CLICK REGIS");
+            Debug.WriteLine(_flag);
+           
             if (!_flag)
             {
+                txtLoginUsername.Text = "";
+                txtLoginPassword.Password = "";
                 _flag = true;
                 return;
             }
+            if (!SQLquery.queryOperation.SQLcheckUsername(txtLoginUsername.Text))
+            {
+                MessageBox.Show("This username already used!!");
+                return;
+            }
 
-
-            SQLquery.queryOperation.SQLlogin(txtLoginUsername, txtLoginPassword);
+            SQLquery.queryOperation.SQLRegister(txtLoginUsername, txtLoginPassword);
 
 
 
@@ -105,6 +119,16 @@ namespace Login
                 labelComfirmPass.Content = "Password is matched";
                 labelComfirmPass.Foreground = Brushes.Green;
             }
+        }
+
+        private void onMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
+
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

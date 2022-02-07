@@ -12,9 +12,9 @@ DEBUG;TRACE
 C:\Users\KHACH\source\repos\Login\Login\App.xaml
 141367460521
 
-27-272878989
+281656024933
 182064258488
 LoginWindow.xaml;ProcessWindow.xaml;ResourceDictionary\ButtonLoginDictionary.xaml;ResourceDictionary\ButtonLogoutDictionary.xaml;ResourceDictionary\ComfirmPassDictionary.xaml;ResourceDictionary\FontDictionary.xaml;ResourceDictionary\LoginPassword.xaml;ResourceDictionary\LoginUsername.xaml;ResourceDictionary\TextboxMaterial.xaml;View\CorrectFlag.xaml;View\IncorrectFlag.xaml;View\LearnView.xaml;View\OptionView.xaml;View\TestView.xaml;
 
-False
+True
 

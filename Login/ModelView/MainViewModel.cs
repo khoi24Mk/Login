@@ -8,19 +8,20 @@ using System.Threading.Tasks;
 
 namespace Login.ModelView
 {
-    public class MainViewModel: ObservationObject
+    public class MainViewModel : ObservationObject
     {
         public PasswordComfirmViewModel Pass { get; set; }
         public UsernameViewModel Username { get; set; }
 
 
-         
+
         public MainScreen MyMainScreen { get; set; }
         public MainFlag MyMainFlag { get; set; }
 
         public ImageViewModel ImageViewModel { get; set; }
+        public UserModelView UserModelview {get;set;}
 
-       
+
         public MainViewModel()
         {
             Pass = new PasswordComfirmViewModel();
@@ -30,7 +31,7 @@ namespace Login.ModelView
             MyMainScreen = new OptionViewModel();
             ImageViewModel = new ImageViewModel();
 
-           
+            UserModelview = new UserModelView();
 
 
         }
